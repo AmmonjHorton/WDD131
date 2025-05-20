@@ -23,11 +23,17 @@ nav a{
 a:visited {
   color: var(--accent-color);
 }
-img{
+.gallery img{
     margin: 0;
     object-fit: cover;
     height: 250px;
     width: 250px;
+}
+dialog img {
+    width: 100%;
+    height: auto;   
+    display: block;
+    margin: 0 auto;
 }
 .everything{
     flex-direction: column; 
@@ -55,6 +61,29 @@ main{
 }
 .hide {
     display: none;
+}
+/* Hide menu links by default on small screens */
+#menu-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Show menu links when .show is added */
+#menu-links.show {
+    display: flex;
+}
+
+/* Always show menu links on wider screens */
+@media (min-width: 800px) {
+    #menu-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 20px;
+    }
+    #menu-button {
+        display: none;
+    }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
@@ -97,4 +126,33 @@ main{
     #menu-button {
         display: none;
     }
+}
+dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  padding: 0;
+  z-index: 10;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+dialog img {
+  display: block;
+  margin: 20vh auto;
+  width: 90%;
+  max-height: 100%;
+}
+.close-viewer {
+  position: absolute;
+  top: 20vh;
+  right: 5vw;
+  font-size: 2rem;
+  background: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 11;
 }
