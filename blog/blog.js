@@ -25,3 +25,28 @@ const articles = [
 		stars: '⭐⭐⭐⭐'
 	}
 ]
+// ...existing code...
+
+function articleTemplate(article) {
+  return `
+    <article class="review">
+      <div class="review-left">
+        <div class="review-date">${article.date}</div>
+        <div class="review-ages">${article.ages}</div>
+        <div class="review-genre">${article.genre}</div>
+        <div class="review-stars">${article.stars}</div>
+      </div>
+      <div class="review-center">
+        <h2 class="review-title">${article.title}</h2>
+        <img src="${article.imgSrc}" alt="${article.imgAlt}" class="cover">
+        <div class="review-desc">${article.description}</div>
+      </div>
+      <div class="review-right">
+        Filters will go here
+      </div>
+    </article>
+  `;
+}
+
+const main = document.querySelector("main");
+main.innerHTML = articles.map(articleTemplate).join("");
