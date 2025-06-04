@@ -7,24 +7,25 @@
   border-radius: 8px;
   padding: 1em;
   margin: 2em 0;
-  background: #0bb25e;
+  background: #ffffff;      /* White background for high contrast */
   max-width: 900px;
+  color: #222222;           /* Dark text */
 }
 .container {
   margin: 0 auto;
   padding: 1em;
-  background-color: #30f7b8;
+  background-color: #f2f2f2; /* Light gray for subtle contrast */
 }
 
 .review-left {
   text-align: left;
   font-size: 0.95em;
-  color: #fc0202;
+  color: #222222;
 }
 
 .review-center {
   text-align: center;
-  background-color: #049220;
+  background-color: transparent;  /* Remove green backgrounds for clarity */
 }
 
 .review-title {
@@ -58,4 +59,17 @@
     text-align: center;
     margin-bottom: 1em;
   }
+}
+
+nav a, nav li {
+  font-size: 1.2em;
+  color: #8b2332;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: underline;
+  color: #b3003c;
 }
