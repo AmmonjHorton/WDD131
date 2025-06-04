@@ -1,59 +1,80 @@
 .review {
   display: grid;
-  grid-template-columns: 120px 1fr 180px;
-  gap: 1.5em;
+  grid-template-columns: 140px 1fr 180px;
+  gap: 2em;
   align-items: start;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 1em;
-  margin: 2em 0;
-  background: #ffffff;      /* White background for high contrast */
+  padding: 1em 0;
+  margin: 2.5em 0;              /* More space between articles */
+  background: #ffffff;
   max-width: 900px;
-  color: #222222;           /* Dark text */
+  color: #222222;
 }
-h1{
-  color: #8b2332;           /* Dark red for headings */
-  font-size: 1.8em;
-  margin-bottom: 0.5em;
-  text-align: center;      /* Center align headings */
-}
-.container {
+
+main {
+  max-width: 900px;             /* Match .review and nav width */
   margin: 0 auto;
-  padding: 1em;
-  background-color: #f2f2f2; /* Light gray for subtle contrast */
 }
 
 .review-left {
-  text-align: left;
-  font-size: 0.95em;
-  color: #222222;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;         /* Right align all details */
+  border-right: 2px solid #8b2332;
+  padding: 0 1.2em;              /* Space left and right of border */
+  margin-right: 0.5em;
+  font-size: 1.08em;
+  line-height: 1.3;              /* Slightly reduced line spacing */
+  min-width: 110px;
+}
+
+.review-date {
+  font-size: 1.15em;             /* Increase date font size */
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+.review-ages,
+.review-genre,
+.review-stars {
+  margin-bottom: 0.1em;
 }
 
 .review-center {
   text-align: center;
-  background-color: transparent;  /* Remove green backgrounds for clarity */
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .review-title {
   color: #8b2332;
+  margin-top: 0;                 /* Remove default top margin */
   margin-bottom: 0.5em;
+  align-self: flex-start;
+  text-align: left;
 }
 
 .cover {
   max-width: 150px;
-  margin-bottom: 1em;
+  margin: 0.5em auto 1em auto;   /* Center image, add space above/below */
   border-radius: 4px;
+  display: block;
 }
 
 .review-desc {
   text-align: left;
   margin-top: 1em;
+  width: 100%;
 }
 
 .review-right {
   text-align: left;
   font-size: 0.95em;
   color: #444;
+  align-self: flex-start;
 }
 
 /* Navigation Bar Styles */
