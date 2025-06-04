@@ -11,6 +11,12 @@
   max-width: 900px;
   color: #222222;           /* Dark text */
 }
+h1{
+  color: #8b2332;           /* Dark red for headings */
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  text-align: center;      /* Center align headings */
+}
 .container {
   margin: 0 auto;
   padding: 1em;
@@ -48,6 +54,37 @@
   text-align: left;
   font-size: 0.95em;
   color: #444;
+}
+
+/* Navigation Bar Styles */
+nav ul {
+  list-style: none;           /* Remove bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;              /* Arrange items in a row */
+  justify-content: flex-end;  /* Align links to the right (optional) */
+  background: #fff;           /* Bar background color */
+  border-bottom: 2px solid #8b2332; /* Optional: add a bottom border */
+  text-align: center;
+}
+
+nav li {
+  margin: 0 1.5em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #8b2332;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.5em 0;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #b3003c;
+  text-decoration: underline;
 }
 
 /* Responsive: stack columns on small screens */
