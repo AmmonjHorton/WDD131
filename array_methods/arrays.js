@@ -6,7 +6,7 @@ function listTemplate(step) {
 const stepsHtml = steps.map(listTemplate);
 document.querySelector("#myList").innerHTML =  stepsHtml.join("");
 
-const grades = ["A", "B", "A", "C", "B", "A"];
+const grades = ["A", "B", "A"];
 function convertGradeToPoints(grade) {
   let points = 0;
   if (grade === "A") {
@@ -24,5 +24,25 @@ function convertGradeToPoints(grade) {
   return points;
 }
 const gpaPoints = grades.map(convertGradeToPoints);
+
 console.log(gpaPoints);
+
+const pointsTotal = gpaPoints.reduce(function(total, item) { return total + item; });
+
+const gpa = pointsTotal / gpaPoints.length;
+
+console.log(gpa);
+
+const fruits = ['watermelon', 'peach', 'apple', 'tomato', 'grape']
+const shortFruits = fruits.filter(function(fruit){
+  return fruit.length < 6;
+});
+console.log(shortFruits); 
+
+const numbers = [12, 34, 21, 54];
+const luckyNumber = 21;
+let luckyNumberIndex = numbers.indexOf(luckyNumber);
+
+console.log(luckyNumberIndex);
+console.log("Ammon Horton");
 
