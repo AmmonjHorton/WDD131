@@ -1,0 +1,54 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0; /* No gap, overlap handled by margin */
+  width: 900px; /* Enough space for overlap */
+  margin: 2em auto;
+}
+
+.card {
+  width: 420px;
+  height: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  padding: 1.5em;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card-front {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: #fff;
+  z-index: 2;
+}
+
+.card-back {
+  background: #c4c4c4;
+  color: #fff;
+  margin-left: -300px;   /* Overlap horizontally */
+  margin-top: 60px;      /* Offset vertically for diagonal effect */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 2em;
+  padding-right: 2em;
+  z-index: 1;
+  color: black
+}
+
+.card label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+}
+.card input {
+  margin-top: 0.3em;
+  padding: 0.5em;
+  border-radius: 6px;
+  border: none;
+  font-size: 1em;
+}

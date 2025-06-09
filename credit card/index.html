@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Card</title>
     <script src="card.js" defer></script>
+    <link rel="stylesheet" href="card.css" />
 </head>
 <body>
-    <form id = "credit-card">
-        
-
-
-        <button type="submit" id="submit-button">Submit</button>
-    </form>
+    <form id="credit-card">
+  <div class="card-container">
+    <div class="card card-front">
+      <label for ="cardNumber"> Card Number </label>
+        <input type="text" maxlength="16" placeholder="1234 5678 9012 3456" name="cardNumber" required />
+      <label for="name">Name</label>
+        <input type="text" placeholder="Cardholder Name" name="cardName" required />
+      <label for="expiry">Expiration Date</label>
+        <input type="text" maxlength="5" placeholder="MM" name="expiry" required />
+        <input type="text" maxlength="5" placeholder="YY" name="expiryYear" required />
+    </div>
+    <div class="card card-back">
+      <label for="cvv">CVV/CVC</label>
+        <input type="text" maxlength="3" placeholder="123" name="cvv" required />
+      
+    </div>
+  </div>
+  <button type="submit" id="submit-button">Submit</button>
+</form>
 </body>
 </html>
