@@ -45,7 +45,7 @@ function togglePaymentDetails(e) {
   }
 }
 document
-  .querySelector("#paymentMethod")
+  .querySelector("#payment")  
   .addEventListener("change", togglePaymentDetails);
 // helper function to display our errors.
 function showErrors(errors) {
