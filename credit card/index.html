@@ -6,23 +6,36 @@
     <title>Credit Card</title>
     <script src="card.js" defer></script>
     <link rel="stylesheet" href="card.css" />
-</head>
+    <link rel="icon" href="favicon.png" type="image/png"></head>
 <body>
     <form id="credit-card">
   <div class="card-container">
     <div class="card card-front">
-      <label for ="cardNumber"> Card Number </label>
-        <input type="text" maxlength="16" placeholder="1234 5678 9012 3456" name="cardNumber" required />
-      <label for="name">Name</label>
-        <input type="text" placeholder="Cardholder Name" name="cardName" required />
-      <label for="expiry">Expiration Date</label>
-        <input type="text" maxlength="5" placeholder="MM" name="expiry" required />
-        <input type="text" maxlength="5" placeholder="YY" name="expiryYear" required />
+      <div class="total-row">TOTAL: $199 <span class="chip"></span></div>
+      <div class="card-number-row">
+        <label for="cardNumber">CARD NUMBER</label>
+        <input type="text" maxlength="19" placeholder="1234 5678 9101 1020" name="cardNumber" required />
+      </div>
+      <div class="card-details-row">
+        <div>
+          <label for="cardName">CARD HOLDER</label>
+          <input type="text" placeholder="John Doe" name="cardName" required />
+        </div>
+        <div class="expiry-fields">
+          <label>EXPIRATION</label>
+          <div class="expiry-inputs">
+            <input type="text" maxlength="2" placeholder="MM" name="expiry" required />
+            <input type="text" maxlength="2" placeholder="YY" name="expiryYear" required />
+          </div>
+        </div>
+      </div>
     </div>
     <div class="card card-back">
-      <label for="cvv">CVV/CVC</label>
-        <input type="text" maxlength="3" placeholder="123" name="cvv" required />
-      
+      <div class="magstripe"></div>
+      <div class="cvv-row">
+        <label for="cvv">CVC/CVV</label>
+        <input type="text" maxlength="3" placeholder="xxx" name="cvv" required />
+      </div>
     </div>
   </div>
   <button type="submit" id="submit-button">Submit</button>
