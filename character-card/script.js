@@ -3,8 +3,8 @@ const character = {
       class: "Eldritch Horror",
       level: 5,
       health: 100,
-      image: 'aemon.jpeg',
-      attacked() {
+      image: "images/aemon.jpeg",
+      attacked() {  
         if (this.health >= 20) {
           this.health -= 20;
         } else {
