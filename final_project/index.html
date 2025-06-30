@@ -4,9 +4,21 @@
   <meta charset="UTF-8">
   <title>My Programming Projects</title>
   <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <h1>My Programming Projects</h1>
+  <div class ="container">
+   
+      <h1>My Programming Projects</h1>
+       <aside id ="sidebar">
+    <ul>
+      <li><button class="filter-btn" data-type="all">All</button></li>
+      <li><button class="filter-btn" data-type="web">Web</button></li>
+      <li><button class="filter-btn" data-type="python">Python</button></li>
+      <li><button class="filter-btn" data-type="engineering">Engineering</button></li>
+      <li><button class="filter-btn" data-type="non-stem">Non-STEM</button></li>
+    </ul>
+    </aside>
   <div id="projects"></div>
   <button id="showAddForm">Add Project</button>
   <div id="addFormContainer" class="hidden">
@@ -18,8 +30,16 @@
       <button type="submit">Add</button>
       <button type="button" id="cancelAdd">Cancel</button>
       <div id="addError" style="color:red"></div>
+      <label>Type:
+  <select id="projectType" required>
+    <option value="web">Web</option>
+    <option value="python">Python</option>
+    <option value="engineering">Engineering</option>
+    <option value="non-stem">Non-STEM</option>
+  </select>
+</label><br>
     </form>
   </div>
-  <script src="app.js"></script>
+  </div>
 </body>
 </html>
