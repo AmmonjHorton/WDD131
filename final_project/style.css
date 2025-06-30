@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; margin: 2em; }
+#projects { margin-bottom: 2em; }
+.project { border: 1px solid #ccc; padding: 1em; margin-bottom: 1em; border-radius: 8px; }
+.hidden { display: none; }
+#addFormContainer { background: #f9f9f9; border: 1px solid #bbb; padding: 1em; border-radius: 8px; margin-bottom: 2em; }

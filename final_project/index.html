@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Programming Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>My Programming Projects</h1>
+  <div id="projects"></div>
+  <button id="showAddForm">Add Project</button>
+  <div id="addFormContainer" class="hidden">
+    <form id="addProjectForm">
+      <label>Password: <input type="password" id="adminPassword" required></label><br>
+      <label>Title: <input type="text" id="projectTitle" required></label><br>
+      <label>Description: <textarea id="projectDesc" required></textarea></label><br>
+      <label>Link: <input type="url" id="projectLink" required></label><br>
+      <button type="submit">Add</button>
+      <button type="button" id="cancelAdd">Cancel</button>
+      <div id="addError" style="color:red"></div>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
