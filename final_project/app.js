@@ -3,12 +3,14 @@ const ADMIN_PASSWORD = "letmein"; // Change this to your secret password
 let projects = [
   {
     title: "Portfolio Website",
+    thumbnail: "images/portfolio-thumbnail.jpg",
     description: "A personal website built with HTML, CSS, and JavaScript.",
     link: "https://yourportfolio.com",
     type: "web"
   },
   {
     title: "Weather App",
+    thumbnail: "images/weather-app-thumbnail.jpg",
     description: "A weather forecast app using the OpenWeatherMap API.",
     link: "https://github.com/yourusername/weather-app",
     type: "web"
