@@ -3,42 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>My Programming Projects</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
   <script src="app.js" defer></script>
 </head>
+<header>
+  <img src="images/logo-dark.png" alt="Logo image" />
+  <h1>Ammon's Awesome All-encompassing Accumulation</h1>
+</header>
 <body>
   <div class ="container">
    
       <h1>My Programming Projects</h1>
-       <aside id ="sidebar">
-    <ul>
-      <li><button class="filter-btn" data-type="all">All</button></li>
-      <li><button class="filter-btn" data-type="web">Web</button></li>
-      <li><button class="filter-btn" data-type="python">Python</button></li>
-      <li><button class="filter-btn" data-type="engineering">Engineering</button></li>
-      <li><button class="filter-btn" data-type="non-stem">Non-STEM</button></li>
-    </ul>
+      <div id="layout">
+    <aside id="sidebar">
+      <ul>
+        <li><button class="filter-btn" data-type="all">All</button></li>
+        <li><button class="filter-btn" data-type="web">Web</button></li>
+        <li><button class="filter-btn" data-type="python">Python</button></li>
+        <li><button class="filter-btn" data-type="engineering">Engineering</button></li>
+        <li><button class="filter-btn" data-type="non-stem">Non-STEM</button></li>
+      </ul>
     </aside>
-  <div id="projects"></div>
-  <button id="showAddForm">Add Project</button>
-  <div id="addFormContainer" class="hidden">
-    <form id="addProjectForm">
-      <label>Password: <input type="password" id="adminPassword" required></label><br>
-      <label>Title: <input type="text" id="projectTitle" required></label><br>
-      <label>Description: <textarea id="projectDesc" required></textarea></label><br>
-      <label>Link: <input type="url" id="projectLink" required></label><br>
-      <button type="submit">Add</button>
-      <button type="button" id="cancelAdd">Cancel</button>
-      <div id="addError" style="color:red"></div>
-      <label>Type:
-  <select id="projectType" required>
-    <option value="web">Web</option>
-    <option value="python">Python</option>
-    <option value="engineering">Engineering</option>
-    <option value="non-stem">Non-STEM</option>
-  </select>
-</label><br>
-    </form>
+    <main>
+      <div id="projects"></div>
+      <button id="showAddForm">Add Project</button>
+      <div id="addFormContainer" class="hidden">
+        <form id="addProjectForm">
+          <label>Password: <input type="password" id="adminPassword" required></label><br>
+          <label>Title: <input type="text" id="projectTitle" required></label><br>
+          <label>Description: <textarea id="projectDesc" required></textarea></label><br>
+          <label>Link: <input type="url" id="projectLink" required></label><br>
+          <label>Type:
+            <select id="projectType" required>
+              <option value="web">Web</option>
+              <option value="python">Python</option>
+              <option value="engineering">Engineering</option>
+              <option value="non-stem">Non-STEM</option>
+            </select>
+          </label><br>
+          <button type="submit">Add</button>
+          <button type="button" id="cancelAdd">Cancel</button>
+          <div id="addError" style="color:red"></div>
+        </form>
+      </div>
+    </main>
   </div>
   </div>
 </body>

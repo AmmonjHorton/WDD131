@@ -1,15 +1,31 @@
+:root {
+--primary-color: rgb(84, 95, 102)   ;
+--secondary-color: rgb(255, 214, 44) ;
+--accent1-color: rgb(73, 175, 95);
+--accent2-color: rgb(51, 53, 51);
+} 
 body { 
-    font-family: Arial, 
-    sans-serif; margin: 2em; 
+    font-family: condiment, sriracha;
+    margin: 0;
+    padding: 0; 
 }
 #projects { 
     margin-bottom: 2em; 
+    display: flex;
+    flex-direction: column;
+    border: 5px solid var(--accent1-color); 
 }
 .project { 
-    border: 1px solid #ccc; 
+    display: flex;
+    flex-direction: column;
+    border-bottom: 5px solid var(--accent1-color); 
+    border-top: 5px solid var(--accent1-color);
     padding: 1em; 
     margin-bottom: 1em; 
-    border-radius: 8px; 
+    background-color: var(--accent2-color);
+    color: var(--secondary-color);
+
+    
 }
 .hidden { 
     display: none; 
@@ -31,6 +47,11 @@ body {
   border-radius: 8px;
   margin-right: 2em;
   height: fit-content;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 #sidebar ul {
   list-style: none;
@@ -59,4 +80,42 @@ main {
   display: flex;
   align-items: center;
   
+}
+header {
+  height: 100px;
+  display: flex;
+  background-color: var(--accent2-color);
+  margin: 0 0 2em 0;
+  padding: 0;
+}
+header h1 {
+  color: var(--secondary-color);
+  font-size: 1.5em;
+  margin: auto;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 5px solid var(--accent1-color);
+  border-radius: 8px;
+}
+.container h1 {
+  text-align: center;
+  margin-bottom: 1em;
+  color : var(--primary-color);
+}
+#projectDetails {
+  border: 5px solid var(--accent1-color);
+  border-radius: 8px;
+  padding: 1em;
+  margin-top: 2em;
+  background-color: var(--accent2-color);
+  color: var(--secondary-color);
+}
+#projectDetails img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1em;
 }
