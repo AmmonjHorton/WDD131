@@ -2,11 +2,11 @@ const ADMIN_PASSWORD = "letmein"; // Change this to your secret password
 
 let projects = [
   {
-    title: "Portfolio Website",
-    thumbnail: "images/portfolio-thumbnail.jpg",
+    title: "Computer Systems Final Project",
+    thumbnail: "images/computer-systems-final.jpg",
     description: "A personal website built with HTML, CSS, and JavaScript.",
-    link: "https://yourportfolio.com",
-    type: "web"
+    link: "https://ammonjhorton.github.io/WDD131/final_project/project.html",
+    type: "engineering"
   },
   {
     title: "Weather App",
