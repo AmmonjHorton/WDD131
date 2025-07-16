@@ -1,5 +1,5 @@
 const ADMIN_PASSWORD = "letmein"; // Change this to your secret password
-
+// Sample projects
 let projects = [
   {
     title: "Computer Systems Final Project",
@@ -89,6 +89,5 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
     renderProjects();
   });
 });
-
 loadProjects();
 renderProjects();
