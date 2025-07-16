@@ -9,16 +9,16 @@ let projects = [
     type: "engineering"
   },
   {
-    title: "Weather App",
+    title: "Credit Card Form Validation",
     thumbnail: "images/weather-app-thumbnail.jpg",
-    description: "A weather forecast app using the OpenWeatherMap API.",
-    link: "https://github.com/yourusername/weather-app",
+    description: "Credit card form with validation using JavaScript.",
+    link: "https://ammonjhorton.github.io/WDD131/credit-card/index.html",
     type: "web"
   }
 ];
 
 let currentFilter = "all";
-
+//https://ammonjhorton.github.io/WDD131/credit-card/index.html
 // Render projects
 function renderProjects() {
   const container = document.getElementById("projects");
@@ -74,12 +74,6 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
     currentFilter = this.dataset.type;
     renderProjects();
   });
-});
-projects.push({
-  title: document.getElementById("projectTitle").value,
-  description: document.getElementById("projectDesc").value,
-  link: document.getElementById("projectLink").value,
-  type: document.getElementById("projectType").value
 });
 
 renderProjects();
