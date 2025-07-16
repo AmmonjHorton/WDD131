@@ -37,6 +37,19 @@ function renderProjects() {
   });
 }
 
+// Save projects to localStorage
+function saveProjects() {
+  localStorage.setItem("projects", JSON.stringify(projects));
+}
+
+// Load projects from localStorage
+function loadProjects() {
+  const data = localStorage.getItem("projects");
+  if (data) {
+    projects = JSON.parse(data);
+  }
+}
+
 // Show/hide add form
 document.getElementById("showAddForm").onclick = () => {
   document.getElementById("addFormContainer").classList.remove("hidden");
@@ -64,6 +77,7 @@ document.getElementById("addProjectForm").onsubmit = function(e) {
   document.getElementById("addFormContainer").classList.add("hidden");
   document.getElementById("addError").textContent = "";
   this.reset();
+  saveProjects();
 };
 
 // Filter button event listeners
@@ -76,4 +90,5 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
   });
 });
 
+loadProjects();
 renderProjects();
